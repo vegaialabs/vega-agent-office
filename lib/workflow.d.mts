@@ -1,0 +1,10 @@
+export type Status = 'backlog'|'development'|'testing'|'done';
+export type Action = 'assign'|'submit'|'pass'|'fail';
+export type Role = 'orchestrator'|'develop'|'testing';
+export type Event = {role:Role;action:Action;note:string;at:string};
+export type Task = {id:string;project_id?:string;title:string;status:Status;revision:number;cycles:number;events:Event[]};
+export const states: readonly Status[];
+export const roles: Readonly<Record<Status,Role>>;
+export function newTask(title:string,id?:string):Task;
+export function transition(task:Task,action:Action,note?:string):Task;
+export function metrics(tasks:Task[]):{total:number;done:number;progress:number;cycles:number};
