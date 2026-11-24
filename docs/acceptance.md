@@ -11,6 +11,9 @@
 - [x] Existing Docker/VPS URL https://agentoffice.vegaialabs.com opened signed-out by Testing; HTTP 200, no hosting login, no pageerrors.
 - [ ] Public candidate deployment and real signed-out/Auth acceptance (active public service unchanged).
 - [x] Local v0.6 candidate deployed on loopback and initial evidence route verified.
-- [ ] GitHub publication and remote CI green (not published; local CI workflow prepared).
+- [x] GitHub publication and remote CI green for b45f720 (run 45403236326).
 - [x] v0.6 local /demo and /evidence routes: desktop/mobile browser suite 4/4, mocked CAPTCHA suite 5/5, unit 7/7, typecheck/build PASS (assistant-operated; independent review pending).
 - [x] Later v0.6 assistant-operated browser suite 10/10 (including office, handbook, English guide and report download); independent final review still pending.
+
+## 2026-11-24 — manual password-demo acceptance in testing
+Owner browser validation: sign-in, project/task creation, correction and approval, sign-out and new sign-in with restored data. Read-only SQL confirmed done, revision 5, cycles 1 and five events. CI passed for b45f720 (run 45403236326). This is owner-operated testing and assistant SQL verification, not independent Codex sign-off. Real two-account isolation and production acceptance remain pending.

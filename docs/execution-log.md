@@ -161,3 +161,6 @@ Assistant-operated extension: English evaluator guide /en (workspace remains Spa
 
 ## Alternative password-mode candidate
 Added optional pre-created demo login and local sign-out; retained anonymous CAPTCHA mode and local demo. Unit tests 7/7 and TypeScript/build passed. Automated password-mode browser validation was not completed because a tool invocation was blocked. The test project's demo account existence and email confirmation were verified; real login and Auth configuration were not verified. This change is assistant-operated, not part of the original independent Codex review. No production or remote Git branch changes made.
+
+## 2026-11-24 — manual password-demo acceptance in testing
+Owner browser validation: sign-in, project/task creation, correction and approval, sign-out and new sign-in with restored data. Read-only SQL confirmed done, revision 5, cycles 1 and five events. CI passed for b45f720 (run 45403236326). This is owner-operated testing and assistant SQL verification, not independent Codex sign-off. Real two-account isolation and production acceptance remain pending.

@@ -23,11 +23,11 @@ Overall acceptance: BLOCKED / incomplete. This report is a historical snapshot, 
 
 ## Outstanding acceptance gates
 
-- Real Supabase anonymous authentication and cross-session persistence/isolation.
-- Real server-side Turnstile enforcement.
+- Real two-account isolation; anonymous authentication is not the selected delivery mode.
+- Real Turnstile enforcement unverified for alternative anonymous mode.
 - Independent final agent sign-off for the final candidate.
 - Production candidate publication and verification.
-- GitHub publication and remote CI results.
+- Remote CI re-run after evidence update.
 
 ## Reproduction
 
@@ -39,3 +39,6 @@ npm run test:integration
 npm run test:auth (dedicated test environment and fresh CAPTCHA tokens required)
 
 Source of evidence: docs/execution-log.md and docs/acceptance.md in the delivery repository. No secrets or private submission links are included in this report.
+
+## 2026-11-24 — manual password-demo acceptance in testing
+Owner browser validation: sign-in, project/task creation, correction and approval, sign-out and new sign-in with restored data. Read-only SQL confirmed done, revision 5, cycles 1 and five events. CI passed for b45f720 (run 45403236326). This is owner-operated testing and assistant SQL verification, not independent Codex sign-off. Real two-account isolation and production acceptance remain pending.
