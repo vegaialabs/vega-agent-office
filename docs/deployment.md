@@ -19,3 +19,6 @@ Public values are compiled at build time; setting them only at container runtime
 
 ## Local v0.6 staging
 The candidate-only helper `scripts/switch-candidate.sh IMAGE` targets the existing loopback candidate at 18132. It keeps the old container stopped and automatically restores it if startup or HTTP route checks fail. It does not modify production, DNS, Nginx or Supabase. Build and test the exact image first. This is not a production release authorization.
+
+## Password-mode candidate (alternative, not yet accepted)
+Create and confirm a demo user through the Supabase Authentication dashboard in the dedicated test project. Build with `NEXT_PUBLIC_AUTH_MODE=password`, `NEXT_PUBLIC_DEMO_EMAIL`, `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. The password is never a build argument. Verify signed-out login, wrong-password rejection, data creation and reload, sign-out, and two distinct accounts for cross-user isolation. The single shared evaluator account is not a separate tenant per visitor. Do not publish production until the selected mode is accepted. Historical Turnstile checks apply to the original anonymous mode, not as proof of password authentication.

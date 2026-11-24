@@ -31,3 +31,6 @@ The original Codex session delegated to separate Develop and Testing agents and 
 
 ## GitHub and release
 Lockfile and CI included; `.env*`, dependencies/builds/test artifacts ignored. Review `git diff` and tracked files before publishing. There are no private Vega packages. Publishing and production replacement require approval. See `docs/deployment.md` for staged Docker commands and `docs/execution-log.md` for actual evidence and remaining blockers.
+
+## Pre-created demo account (alternative Auth mode)
+Set `NEXT_PUBLIC_AUTH_MODE=password` and `NEXT_PUBLIC_DEMO_EMAIL` to the confirmed demo user's email. Supply the Supabase URL and publishable key at build time. The password is entered by the evaluator and is not included in the source or image. The demo account shares its projects and tasks with anyone using the same credentials; it must contain synthetic data only. Use the local demo for independent browser-only data. Disable public signup and anonymous sign-ins in a dedicated password-demo project. Verify its actual Auth configuration; this mode does not bypass provider-side CAPTCHA if required. Historical anonymous/CAPTCHA tests remain available for the original mode. Two distinct test accounts are required to demonstrate cross-user RLS with real Auth. Real password-mode acceptance remains pending.

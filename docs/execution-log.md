@@ -158,3 +158,6 @@ Assistant-operated extension, not historical Codex agent work. Added project-sco
 
 ## 2026-11-24 — evaluator guide and report
 Assistant-operated extension: English evaluator guide /en (workspace remains Spanish), downloadable static Markdown quality report with distinct historical Codex and later assistant checks, and Docker public assets support. npm run check PASS, unit 7/7, typecheck/build; desktop/mobile E2E 10/10 PASS including report download and axe on the English guide. Report records outstanding gates, not live certification. Production and real Auth remain unchanged.
+
+## Alternative password-mode candidate
+Added optional pre-created demo login and local sign-out; retained anonymous CAPTCHA mode and local demo. Unit tests 7/7 and TypeScript/build passed. Automated password-mode browser validation was not completed because a tool invocation was blocked. The test project's demo account existence and email confirmation were verified; real login and Auth configuration were not verified. This change is assistant-operated, not part of the original independent Codex review. No production or remote Git branch changes made.
