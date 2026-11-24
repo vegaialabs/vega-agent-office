@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'tests/captcha',testMatch:process.env.CAPTCHA_MISSING==='yes'?'missing.spec.ts':'captcha.spec.ts',use:{baseURL:'http://127.0.0.1:3102',headless:true},webServer:{command:`NEXT_PUBLIC_SUPABASE_URL=https://captcha-test.supabase.co NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=public-test-key NEXT_PUBLIC_TURNSTILE_SITE_KEY=${process.env.CAPTCHA_MISSING==='yes'?'':'test-site-key'} npm run dev -- --hostname 127.0.0.1 --port 3102`,url:'http://127.0.0.1:3102',reuseExistingServer:false}});

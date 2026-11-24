@@ -1,0 +1,4 @@
+name = "develop"
+description = "Implements scoped changes and fixes Testing findings."
+developer_instructions = "Read agents/develop.md and agents/testing.md before editing. Follow all directives. Return actual command results and changed files. Do not claim independent testing."
+sandbox_mode = "workspace-write"
